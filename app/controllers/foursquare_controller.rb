@@ -4,11 +4,11 @@ class FoursquareController < ApplicationController
 		@checkin = ActiveSupport::JSON.decode(params[:checkin])
 		@shouttxt = @checkin['shout']
 		@venue = @checkin['venue']
-		@photoless = Toilet.find_by_photo_url('')
-		@photoless.each do | pltoilet |
-			pltoilet.photo_url = 'abc'
+	#	@photoless = Toilet.find_by_photo_url('')
+	#	@photoless.each do | pltoilet |
+	#		pltoilet.photo_url = 'abc'
 
-		end
+	#	end
 		if (@shouttxt.index('toilet') != nil)
 			@toilet = Toilet.new
 			@user = Authorization.find_by_uid(@checkin['user']['id'])
@@ -21,11 +21,8 @@ class FoursquareController < ApplicationController
 			@toilet.venue_name = @venue['name']
 			@toilet.venue_id = @venue['id']
 			@toilet.save
+			puts @toilet.to_json
 		end
-	end
-	def lol
-		puts "2222"
-		puts foursquare.history :limit => 10
 	end
 
 end
