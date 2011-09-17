@@ -25,7 +25,7 @@ class FoursquareController < ApplicationController
 		end
 	end
 def lol
-	@checkins = foursquare.checkins
+	@checkins = foursquare.checkin.fetch({'id' => '4e752e9562e12635164e6953'})
 	puts @checkins.to_json
 end
 end
