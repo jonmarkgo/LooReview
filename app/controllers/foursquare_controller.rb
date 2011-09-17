@@ -12,8 +12,7 @@ class FoursquareController < ApplicationController
 	#	end
 		if (@shouttxt.index('toilet') != nil)
 			@toilet = Toilet.new
-			@user = Authorization.find_by_uid(@checkin['user']['id'])
-			@toilet.user_id = @user.user.id
+			@toilet.user_id = @checkin['user']['id']
 			@toilet.checkin_id = @checkin['id']
 			@toilet.photo_url = ''
 			@toilet.gender = @checkin['user']['gender']
