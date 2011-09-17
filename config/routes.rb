@@ -18,6 +18,8 @@ FoursquareSpeed::Application.routes.draw do
     end
   end
   match 'foursquare/push' => 'foursquare#push'
+
+  match 'foursquare/lol' => 'foursquare#lol'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -24,5 +24,8 @@ class FoursquareController < ApplicationController
 			puts @toilet.to_json
 		end
 	end
-
+def lol
+	@checkins = foursquare.checkins
+	puts @checkins
+end
 end
