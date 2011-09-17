@@ -26,6 +26,6 @@ class FoursquareController < ApplicationController
 	end
 def lol
 	@checkins = foursquare.checkins
-	puts @checkins
+	puts @checkins.to_json
 end
 end
