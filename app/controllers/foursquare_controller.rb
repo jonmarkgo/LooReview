@@ -1,5 +1,6 @@
 require 'foursquare'
 class FoursquareController < ApplicationController
+	 skip_before_filter :verify_authenticity_token  
 	def push
 		@checkin = ActiveSupport::JSON.decode(params[:checkin])
 		@shouttxt = @checkin['shout']
