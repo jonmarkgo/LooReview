@@ -1,6 +1,6 @@
 defaults: &defaults
-  app_id: <%= ENV['FOURSQUARE_APP_ID'] %>
-  app_secret: <%= ENV['FOURSQUARE_APP_SECRET'] %>
+  app_id: 'ZZ5O4TENXWIEKI0B4PYG5GUVDNJCBMFF4WIMQ5F3NEB5JECY'
+  app_secret: 'VGLUUB1KBUZAWACU1HNYIH5VT5DKFI0LITLGPXYBS0A1A0ND'
 
 development:
   <<: *defaults
