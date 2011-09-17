@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @toilet.user_id %>
+</p>
+
+<p>
+  <b>Checkin:</b>
+  <%= @toilet.checkin_id %>
+</p>
+
+<p>
+  <b>Photo url:</b>
+  <%= @toilet.photo_url %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @toilet.gender %>
+</p>
+
+<p>
+  <b>Venue lat:</b>
+  <%= @toilet.venue_lat %>
+</p>
+
+<p>
+  <b>Venue lng:</b>
+  <%= @toilet.venue_lng %>
+</p>
+
+<p>
+  <b>Venue name:</b>
+  <%= @toilet.venue_name %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @toilet.venue_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_toilet_path(@toilet) %> |
+<%= link_to 'Back', toilets_path %>

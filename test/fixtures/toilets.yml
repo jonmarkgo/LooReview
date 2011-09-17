@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user_id: MyString
+  checkin_id: MyString
+  photo_url: MyString
+  gender: MyString
+  venue_lat: MyString
+  venue_lng: MyString
+  venue_name: MyString
+  venue_id: MyString
+
+two:
+  user_id: MyString
+  checkin_id: MyString
+  photo_url: MyString
+  gender: MyString
+  venue_lat: MyString
+  venue_lng: MyString
+  venue_name: MyString
+  venue_id: MyString

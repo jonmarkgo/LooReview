@@ -1,5 +1,7 @@
 FoursquareSpeed::Application.routes.draw do
   
+  resources :toilets
+
   resource :session do
     collection do
       get 'callback'
@@ -15,7 +17,7 @@ FoursquareSpeed::Application.routes.draw do
       get 'venue_details'
     end
   end
-  
+  match 'foursquare/push' => 'foursquare#push'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

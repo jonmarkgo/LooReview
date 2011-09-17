@@ -1,0 +1,37 @@
+<h1>Listing toilets</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Checkin</th>
+    <th>Photo url</th>
+    <th>Gender</th>
+    <th>Venue lat</th>
+    <th>Venue lng</th>
+    <th>Venue name</th>
+    <th>Venue</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @toilets.each do |toilet| %>
+  <tr>
+    <td><%= toilet.user_id %></td>
+    <td><%= toilet.checkin_id %></td>
+    <td><%= toilet.photo_url %></td>
+    <td><%= toilet.gender %></td>
+    <td><%= toilet.venue_lat %></td>
+    <td><%= toilet.venue_lng %></td>
+    <td><%= toilet.venue_name %></td>
+    <td><%= toilet.venue_id %></td>
+    <td><%= link_to 'Show', toilet %></td>
+    <td><%= link_to 'Edit', edit_toilet_path(toilet) %></td>
+    <td><%= link_to 'Destroy', toilet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Toilet', new_toilet_path %>
