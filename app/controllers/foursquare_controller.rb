@@ -29,7 +29,7 @@ class FoursquareController < ApplicationController
 def lol
 @photoless = Toilet.where('photo_url = \'meh\'')
 		@photoless.each do | pltoilet |
-			@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
+			@checkin = foursquare.checkins.find(pltoilet['checkin_id'])
 			pltoilet.photo_url = @checkin['photos']['items'].first['url']
 			pltoilet.save
 			puts pltoilet
