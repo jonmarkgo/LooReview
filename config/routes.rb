@@ -4,7 +4,7 @@ match '/toilets/nearby/:lat/:lng' => 'toilets#nearby'
 #, :as => 'nearby', :constraints => {:lat => /\-*\d+.\d+/ , :lng => /\-*\d+.\d+/ , :range => /\d+/}
 
 match '/toilets' => 'toilets#index'
-  #resources :toilets
+  resources :toilets
 
   resource :session do
     collection do
