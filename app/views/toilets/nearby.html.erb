@@ -9,7 +9,7 @@
                 <h3><%= toilet.venue_name %></h3> <p><strong>"<%= toilet.shout %>"</strong></p> 
                 <p><%= toilet.distance_to([@lat,@lng]) %> mile(s) away</p> 
                 <p><% (1..toilet.rating).each do |i| %>
-                <img src="images/poo.png"><% end %></p> 
+                <img src="/images/poo.png"><% end %></p> 
 </a>
             </li> 
            <% end %>
