@@ -1,5 +1,6 @@
 FoursquareSpeed::Application.routes.draw do
   
+match '/toilets/nearby/:lat/:lng' => 'toilets#nearby'
   resources :toilets
 
   resource :session do
@@ -9,7 +10,6 @@ FoursquareSpeed::Application.routes.draw do
   end
   
   match 'foursquare/push' => 'foursquare#push'
-match '/toilets/nearby' => 'toilets#nearby'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
