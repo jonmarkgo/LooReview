@@ -16,6 +16,7 @@ class SessionsController < ApplicationController
         @puser = User.new
         @puser.uid = current_user.id
         @puser.token = @access_token
+      end
       #@puseraccess_token = @access_token
      # puts @access_token
       puts "eheh"
