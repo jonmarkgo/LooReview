@@ -5,13 +5,15 @@ class FoursquareController < ApplicationController
 		@checkin = ActiveSupport::JSON.decode(params[:checkin])
 		@shouttxt = @checkin['shout']
 		@venue = @checkin['venue']
-#@photoless = Toilet.where('photo_url = \'meh\'')
-#		@photoless.each do | pltoilet |
-	#@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
+@photoless = Toilet.where('photo_url = \'meh\'')
+		@photoless.each do | pltoilet |
+	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
 	#	pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
-#		pltoilet.save
-#		puts pltoilet
-#		end
+	@meh = @checkin.json['photos']['items'].first
+	pltoilet.photo_url = @meh['sizes']['items'].at(1)['url']
+		pltoilet.save
+	#	puts pltoilet
+		end
 		if (@shouttxt.index('toilet') != nil)
 			@toilet = Toilet.new
 			@toilet.user_id = @checkin['user']['id']
@@ -31,7 +33,8 @@ def lol
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
 	puts"1"
 	@meh = @checkin.json['photos']['items'].first
-	puts @meh['sizes']['items'].at(1).to_json
+	@meh = @meh['sizes']['items'].at(1)
+	puts @meh['url'].to_json
 	#puts"2"
 	#puts @checkin.json['photos']['items'].first.sizes.to_json
 		#pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
