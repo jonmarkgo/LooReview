@@ -6,7 +6,7 @@ class FoursquareController < ApplicationController
 		@shouttxt = @checkin['shout']
 		@venue = @checkin['venue']
 
-		if (@shouttxt.index('toilet') != nil)
+		#if (@shouttxt.index('toilet') != nil)
 			@toilet = Toilet.new
 			@toilet.user_id = @checkin['user']['id']
 			@toilet.checkin_id = @checkin['id']
@@ -24,11 +24,21 @@ class FoursquareController < ApplicationController
 		@meh = @checkedin.json['photos']['items'].first
 	@meh = @meh['sizes']['items'].at(2)
 	@toilet.photo_url = @meh['url']
-
-
+require 'iqengines'
+      api = IQEngines.Api()
+      device_id=Time.now.utc.strftime("%Y%m%d%H%M%S")
+      qid, response = api.send_query(@meh['url'], device_id=device_id)
+      puts "1"
+puts response
+response = api.wait_results(device_id=device_id)
+puts "2"
+      puts response
+      response = api.get_result(qid)
+      puts "3"
+      puts response
 			@toilet.save
 			
-		end
+		#end
 			render :status => :ok
 	end
 
