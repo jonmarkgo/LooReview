@@ -3,10 +3,11 @@
 <div id="results1">
 <ul data-role="listview"> 
 <% @toilets.each do |toilet| %>
+
             <li> 
                 <h3><%= toilet.venue_name %></h3> 
                 <p><strong>"<%= toilet.shout %>"</strong></p> 
-                <p><%= toilet.distance %> meters away</p> 
+                <p><%= toilet.distance_to([@lat,@lng]) %> miles away</p> 
                 <p class="ui-li-aside"><strong></strong></p> 
             </li> 
            <% end %>

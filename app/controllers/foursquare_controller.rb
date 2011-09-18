@@ -55,7 +55,6 @@ elsif (@rating > 50 and @rating <= 60)
 else
 	@toilet.rating = 1
 end
-puts @toilet.rating
 			@toilet.save
 			
 		end
