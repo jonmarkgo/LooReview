@@ -31,7 +31,7 @@ def lol
 #puts @photoless.to_json
 		@photoless.each do | pltoilet |
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
-			puts @checkin.to_json
+			puts @checkin[:photos].to_json
 		#pltoilet.photo_url = @checkin['photos']['items'].first['url']
 		#pltoilet.save
 			#puts pltoilet
