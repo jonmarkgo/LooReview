@@ -28,6 +28,7 @@ class FoursquareController < ApplicationController
 	end
 def lol
 @photoless = Toilet.where('photo_url = \'meh\'')
+puts @photoless
 		@photoless.each do | pltoilet |
 			@myt = pltoilet[:toilet]
 puts @myt.to_json
