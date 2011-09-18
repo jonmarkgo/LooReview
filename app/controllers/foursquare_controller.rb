@@ -28,7 +28,7 @@ class FoursquareController < ApplicationController
 			@toilet.venue_lng = @venue['location']['lng']
 			@toilet.venue_name = @venue['name']
 			@toilet.venue_id = @venue['id']
-			@puser = User.find_by_id(@checkin['user']['id'])
+			@puser = User.find_by_uid(@checkin['user']['id'])
 			puts "0"
 			puts @puser.to_json
 						foursquare = Foursquare::Base.new(@puser['token'])
