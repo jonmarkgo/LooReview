@@ -4,7 +4,14 @@ class ToiletsController < ApplicationController
   def nearby
 @lat = params[:lat]
 @lng = params[:lng]
+@lat = @lat.sub('^','-')
+@lat = @lat.sub('~','.')
+@lng = @lng.sub('^','-')
+@lng = @lng.sub('~','.')
 
+@lng = @lng.to_f
+
+@lat = @lat.to_f
     @toilets = Toilet.near([@lat,@lng],5)
 
     respond_to do |format|
