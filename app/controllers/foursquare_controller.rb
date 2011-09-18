@@ -44,8 +44,17 @@ end
 	end
 end
 @rating = @rating.to_i
-@toilet.rating = @rating / 20
-@toilet.rating = @toilet.rating.round
+if (@rating > 0 and @rating <= 20)
+	@toilet.rating = 5
+else if (@rating > 20 and @rating <= 40)
+	@toilet.rating = 4
+else if (@rating > 40 and @rating <= 50)
+	@toilet.rating = 3
+else if (@rating > 50 and @rating <= 60)
+	@toilet.rating = 2
+else if (@rating > 60)
+	@toilet.rating = 1
+end
 puts @toilet.rating
 			@toilet.save
 			
