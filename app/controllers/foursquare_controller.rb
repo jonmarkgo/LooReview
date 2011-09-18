@@ -44,7 +44,7 @@ end
 	end
 end
 @rating = @rating.to_i
-@toilet.rating = @rating % 5
+@toilet.rating = @rating % 20
 puts @toilet.rating
 			@toilet.save
 			
