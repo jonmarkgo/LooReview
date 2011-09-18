@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:jonmarkgo/ruby-iqengines.git
+  revision: ecdc581694e981c5cbd7fcac792d66b9ffd54ee4
+  specs:
+    iqengines (0.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -78,6 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  iqengines!
   json
   rails (= 3.0.3)
   settingslogic
