@@ -18,7 +18,7 @@ class FoursquareController < ApplicationController
 #	pltoilet.photo_url = @meh['url']
 #		pltoilet.save
 	#	puts pltoilet
-		end
+		#end
 		if (@shouttxt.index('toilet') != nil)
 			@toilet = Toilet.new
 			@toilet.user_id = @checkin['user']['id']
