@@ -30,15 +30,19 @@ class FoursquareController < ApplicationController
 			@toilet.venue_id = @venue['id']
 			@puser = User.find_by_id(@checkin['user']['id'])
 						foursquare = Foursquare::Base.new(@puser.account_token)
+						puts"1"
 						puts foursquare
+						puts "2"
 						puts foursquare.to_json
 			@checkedin = foursquare.checkins.find(@checkin['id'])
 		@meh = @checkedin.json['photos']['items'].first
 	@meh = @meh['sizes']['items'].at(1)
 	@toilet.photo_url = @meh['url']
+	puts "3"
 	puts @meh.to_json
 	puts "toilet"
 	puts @toilet.to_json
+	
 			@toilet.save
 		end
 	end
