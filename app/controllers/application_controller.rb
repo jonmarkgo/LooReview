@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
         @current_user ||= foursquare.users.find("self")
         puts "wee"
          puts @current_user.to_json
-      @puser = User.find_by_uid(@current_user.id)
+      @puser = User.find_by_uid(@current_user.uid)
       #@puseraccess_token = @access_token
      # puts @access_token
       puts "eheh"
