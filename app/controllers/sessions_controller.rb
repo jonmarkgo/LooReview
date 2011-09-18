@@ -10,11 +10,11 @@ class SessionsController < ApplicationController
     @access_token = foursquare.access_token(code, callback_session_url)
    
   session[:access_token] = @access_token
-    if (current_user)
-      current_user.access_token = @access_token
-      puts @access_token
-      current_user.save
-    end
+  #  if (current_user)
+   #   current_user.access_token = @access_token
+    #  puts @access_token
+    #  current_user.save
+    #end
     redirect_to examples_path
   end
   
