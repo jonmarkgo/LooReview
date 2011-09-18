@@ -1,4 +1,5 @@
 require 'foursquare'
+require 'rest_client'
 class FoursquareController < ApplicationController
 	 skip_before_filter :verify_authenticity_token  
 	def push
@@ -26,6 +27,8 @@ class FoursquareController < ApplicationController
 	@toilet.photo_url = @meh['url']
 
 
+response = RestClient.get 'http://mkweb.bcgsc.ca/color_summarizer/?xml=1&url='+@meh['url']+'&precision=extreme'
+puts response
 			@toilet.save
 			
 		end
