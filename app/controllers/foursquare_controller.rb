@@ -8,7 +8,7 @@ class FoursquareController < ApplicationController
 @photoless = Toilet.where('photo_url = \'meh\'')
 		@photoless.each do | pltoilet |
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
-		pltoilet.photo_url = @checkin.json['photos']['items'][1]['url']
+		pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
 		pltoilet.save
 		puts pltoilet
 		end
@@ -25,5 +25,13 @@ class FoursquareController < ApplicationController
 			@toilet.save
 		end
 	end
-
+def lol
+	@photoless = Toilet.where('photo_url = \'meh\'')
+		@photoless.each do | pltoilet |
+	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
+		pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
+		pltoilet.save
+		puts pltoilet
+		end
+end
 end
