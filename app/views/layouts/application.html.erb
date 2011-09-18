@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<title>Loo Review</title>
+
+	<!-- meta -->
+	<meta name="author" content="Mike De'Shazer (@itsdeshazer), Jonathan Gottfried (@jonmarkgo), Vanessa Kincaid (@vkinc), Freddy Lopez (freddyl.com) // Done during 4SQ Hack Day NYC 2011" />
+	<meta name="description" content="Find and rate restrooms nearby" />
+	<meta name="keywords" content="find a restroom, easy web app, restroom finder, find nearest bathroom in nyc, find nearest restrooom, free app bathrom finder, find a restroom, loo review, loo finder, loo app, app for finding bathrooms, foursquare hack day, foursquare hack day app, nyc app" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.css" />
+<script src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0b3/jquery.mobile-1.0b3.min.js"></script>
+	<script src="js/main.js"></script>
+	
+	
+</head>
+
+<body>
+
+<div id="firstPage" data-role="page">
+<div id="main" data-role="header">
+
+
+</div>
+<div id="main-body" data-role="content">
+
+<center>
+<img src="images/LR_images-04.png"><br><br>
+<img src="images/LR_images-05.png"><br><br>
+<img src="images/foursquare-login.png"><br><br>
+<a href="#find1" data-transition="slide" data-role="button" data-inline="true">Just Try It Out Once</a>
+<br>
+<br>
+
+</center>
+</div>
+</div>
+
+<div id="find1" data-role="page">
+<div data-role="header" data-position="inline">
+	<a href="index.html" data-icon="delete">Back</a>
+	<h1>Which one?</h1>
+	
+	
+</div>
+<div id="pick1" data-role="content">
+<div id="option1" onclick="window.location.href='#pick2';"  data-transition="slide">
+	<img src="images/LR_images-06.png"><br><br>
+	<img src="images/LR_images-08.png">
+						</div>
+	<div id="option2" onclick="window.location.href='#pick2-1';"  data-transition="slide">
+	<img src="images/LR_images-07.png"><br><br>
+	<img src="images/LR_images-09.png">
+	
+	</div>
+	</div>
+	
+</div>
+
+
+<div id="pick2" data-role="page" style="background-image: url(images/LR_images-10.png); background-repeat:no-repeat;">
+
+	<div data-role="header" data-position="inline">
+	<a href="#find1">Back</a>
+	<h1>Loos Near You</h1>
+	
+</div>
+
+	
+</div>
+
+<div id="pick2-1" data-role="page" style="height:400px; height:320px;">
+
+	<div data-role="header" data-position="inline">
+	<a href="#find1">Back</a>
+	<h1>Loos Near You</h1>
+	
+</div>
+
+<div id="content2-1" data-role="content" style="background-image: url(images/LR_images-10.png); background-repeat:no-repeat; height:100%; width:100%;">
+
+<div id="results1">
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+</div>
+
+
+</div>
+
+
+</body>
+</html>
