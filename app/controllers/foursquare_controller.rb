@@ -26,8 +26,8 @@ class FoursquareController < ApplicationController
 	@meh = @meh['sizes']['items'].at(1)
 	@toilet.photo_url = @meh['url']
 
-
-response = RestClient.get 'http://mkweb.bcgsc.ca/color_summarizer/?xml=1&url='+@meh['url']+'&precision=extreme'
+@surl = @meh['url'].sub('https://','http://')
+response = RestClient.get 'http://mkweb.bcgsc.ca/color_summarizer/?xml=1&url='+@surl+'&precision=extreme'
 puts response
 			@toilet.save
 			
