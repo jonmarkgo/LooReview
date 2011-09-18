@@ -6,9 +6,10 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'rest-client'
-gem 'ruby-hmac'
-gem 'iqengines', :git => 'git://github.com/jonmarkgo/ruby-iqengines.git'
+gem 'geocoder'
+#gem 'rest-client'
+#gem 'ruby-hmac'
+#gem 'iqengines', :git => 'git://github.com/jonmarkgo/ruby-iqengines.git'
 # Use unicorn as the web server
 # gem 'unicorn'
 
