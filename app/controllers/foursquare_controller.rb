@@ -22,7 +22,7 @@ class FoursquareController < ApplicationController
 				
 			@checkedin = foursquare.checkins.find(@checkin['id'])
 		@meh = @checkedin.json['photos']['items'].first
-	@meh = @meh['sizes']['items'].at(2)
+	@meh = @meh['sizes']['items'].at(1)
 	@toilet.photo_url = @meh['url']
 
 
