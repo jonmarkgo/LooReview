@@ -5,7 +5,7 @@ class ToiletsController < ApplicationController
     @city = request.location.city
 @country = request.location.country_code 
 
-    @toilets = Toilet.near(city)
+    @toilets = Toilet.near(@city)
 
     respond_to do |format|
       format.html # index.html.erb
