@@ -8,18 +8,8 @@ FoursquareSpeed::Application.routes.draw do
     end
   end
   
-  resources :examples do
-    collection do
-      get 'user'
-      get 'checkins'
-      get 'friends'
-      get 'venues_search'
-      get 'venue_details'
-    end
-  end
   match 'foursquare/push' => 'foursquare#push'
 
-  match 'foursquare/lol' => 'foursquare#lol'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
