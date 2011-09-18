@@ -1,7 +1,8 @@
 FoursquareSpeed::Application.routes.draw do
   
 match '/toilets/nearby/:lat/:lng' => 'toilets#nearby'
-  resources :toilets
+match '/toilets' => 'toilets#index'
+  #resources :toilets
 
   resource :session do
     collection do
