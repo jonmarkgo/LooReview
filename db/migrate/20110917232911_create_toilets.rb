@@ -5,8 +5,8 @@ class CreateToilets < ActiveRecord::Migration
       t.string :checkin_id
       t.string :photo_url
       t.string :gender
-      t.string :venue_lat
-      t.string :venue_lng
+      t.float :venue_lat
+      t.float :venue_lng
       t.string :venue_name
       t.string :venue_id
 
