@@ -30,15 +30,8 @@ def lol
 @photoless = Toilet.where('photo_url = \'meh\'')
 #puts @photoless.to_json
 		@photoless.each do | pltoilet |
-			puts pltoilet.to_json
-			puts "id"
-			puts pltoilet[:checkin_id]
-			puts "id2"
-			puts pltoilet['checkin_id']
-#			@myt = pltoilet[:toilet]
-#puts @myt.to_json
-#			@checkin = foursquare.checkins.find(@myt['checkin_id'])
-#			puts @checkin.to_json
+	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
+			puts @checkin.to_json
 		#pltoilet.photo_url = @checkin['photos']['items'].first['url']
 		#pltoilet.save
 			#puts pltoilet
