@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/jonmarkgo/ruby-iqengines.git
-  revision: a15ec9e95b79fc0f99559fa96de98ef041071136
+  revision: 9e7e54d948f98d27860c0e216f0ad4622a55db08
   specs:
-    iqengines (0.0.3)
+    iqengines (0.0.4)
 
 GEM
   remote: http://rubygems.org/
