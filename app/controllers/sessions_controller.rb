@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   session[:access_token] = @access_token
     if (current_user)
       @puser = User.find_by_uid(current_user.id)
-      @puser.access_token = @access_token
+      #@puseraccess_token = @access_token
       puts @access_token
       puts "eheh"
       puts @puser.to_json
