@@ -46,11 +46,11 @@ end
 @rating = @rating.to_i
 if (@rating > 0 and @rating <= 20)
 	@toilet.rating = 5
-elseif (@rating > 20 and @rating <= 40)
+elsif (@rating > 20 and @rating <= 40)
 	@toilet.rating = 4
-elseif (@rating > 40 and @rating <= 50)
+elsif (@rating > 40 and @rating <= 50)
 	@toilet.rating = 3
-elseif (@rating > 50 and @rating <= 60)
+elsif (@rating > 50 and @rating <= 60)
 	@toilet.rating = 2
 else
 	@toilet.rating = 1
