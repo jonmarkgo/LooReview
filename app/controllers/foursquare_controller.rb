@@ -31,7 +31,7 @@ class FoursquareController < ApplicationController
 			@puser = User.find_by_id(@checkin['user']['id'])
 			puts "0"
 			puts @puser.to_json
-						foursquare = Foursquare::Base.new(@puser['account_token'])
+						foursquare = Foursquare::Base.new(@puser['token'])
 						puts"1"
 						puts foursquare
 						puts "2"
