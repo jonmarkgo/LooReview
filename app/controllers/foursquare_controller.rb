@@ -29,7 +29,7 @@ def lol
 	@photoless = Toilet.where('photo_url = \'meh\'')
 		@photoless.each do | pltoilet |
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
-	puts @checkin.json['photos']['items'].first.to_json
+	puts @checkin.json['photos']['items'].first['sizes'].to_json
 		#pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
 		#pltoilet.save
 		#puts pltoilet
