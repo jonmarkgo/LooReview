@@ -13,10 +13,10 @@ class SessionsController < ApplicationController
     if (current_user)
       @puser = User.find_by_uid(current_user.id)
       #@puseraccess_token = @access_token
-      puts @access_token
+     # puts @access_token
       puts "eheh"
       puts @puser.to_json
-      @puser.save
+      #@puser.save
     end
     redirect_to examples_path
   end
