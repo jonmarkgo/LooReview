@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    return redirect_to examples_path if current_user
+    return redirect_to toilets_path if current_user
     @authorize_url = foursquare.authorize_url(callback_session_url)
   end
   
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       @puser.token = @access_token
       @puser.save
     end
-    redirect_to examples_path
+    redirect_to toilets_path
   end
   
 end
