@@ -12,7 +12,7 @@ gem 'rest-client'
 #gem 'iqengines', :git => 'git://github.com/jonmarkgo/ruby-iqengines.git'
 # Use unicorn as the web server
 # gem 'unicorn'
-gem 'crack'
+gem 'crack', :git => 'https://github.com/jnunemaker/crack.git'
 # Deploy with Capistrano
 # gem 'capistrano'
 
