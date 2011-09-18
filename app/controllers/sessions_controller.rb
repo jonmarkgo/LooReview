@@ -15,13 +15,9 @@ class SessionsController < ApplicationController
       if (@puser.nil?)
         @puser = User.new
         @puser.uid = current_user.id
-        @puser.token = @access_token
       end
-      #@puseraccess_token = @access_token
-     # puts @access_token
-      puts "eheh"
-      puts @puser.to_json
-      #@puser.save
+      @puser.token = @access_token
+      @puser.save
     end
     redirect_to examples_path
   end
