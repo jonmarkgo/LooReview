@@ -25,7 +25,7 @@ class FoursquareController < ApplicationController
 		end
 	end
 def lol
-	@checkins = foursquare.checkins.find('4e752e9562e12635164e6953')
+	@checkins = foursquare.checkins.find('4e75361452b1c8e5195bfe3b')
 	puts @checkins.to_json
 end
 end
