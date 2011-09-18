@@ -27,7 +27,12 @@ class FoursquareController < ApplicationController
 		end
 	end
 def lol
-	@checkins = foursquare.checkins.find('4e75361452b1c8e5195bfe3b')
-	puts @checkins.to_json
+@photoless = Toilet.find_by_photo_url('')
+		@photoless.each do | pltoilet |
+			@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
+			pltoilet.photo_url = @checkin['photos']['items'].first['url']
+			pltoilet.save
+			puts pltoilet
+		end
 end
 end
