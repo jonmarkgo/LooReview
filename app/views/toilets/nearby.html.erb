@@ -7,7 +7,7 @@
             <li> 
                 <h3><%= toilet.venue_name %></h3> 
                 <p><strong>"<%= toilet.shout %>"</strong></p> 
-                <p><%= toilet.distance.floor %> mile(s) away</p> 
+                <p><%= toilet.distance_to([@lat,@lng]) %> mile(s) away</p> 
                 <p class="ui-li-aside"><strong></strong></p> 
             </li> 
            <% end %>
