@@ -7,7 +7,7 @@
             <li class="toilet"> 
                 <a href="#"><img src="<%= toilet.photo_url %>">
                 <h3><%= toilet.venue_name %></h3> <p><strong>"<%= toilet.shout %>"</strong></p> 
-                <p><%= toilet.distance_to([@lat,@lng]) %> mile(s) away</p> 
+                <p>less than 1 mile away</p> 
                 <p>Rating: <% (1..toilet.rating).each do |i| %>
                 <img src="/images/poo.png"><% end %></p> 
 </a>

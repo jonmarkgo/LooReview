@@ -12,7 +12,7 @@ class ToiletsController < ApplicationController
 @lng = @lng.to_f
 
 @lat = @lat.to_f
-    @toilets = Toilet.near([@lat,@lng],5)
+    @toilets = Toilet.all #near([@lat,@lng],5)
 
     respond_to do |format|
       format.html # index.html.erb
