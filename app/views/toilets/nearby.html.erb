@@ -11,8 +11,6 @@
     <th>Venue name</th>
     <th>Venue</th>
     <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @toilets.each do |toilet| %>
@@ -26,12 +24,8 @@
     <td><%= toilet.venue_name %></td>
     <td><%= toilet.venue_id %></td>
     <td><%= link_to 'Show', toilet %></td>
-    <td><%= link_to 'Edit', edit_toilet_path(toilet) %></td>
-    <td><%= link_to 'Destroy', toilet, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Toilet', new_toilet_path %>
