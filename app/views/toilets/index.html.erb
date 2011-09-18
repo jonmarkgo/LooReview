@@ -1,4 +1,7 @@
 
+
+
+
   <script language="Javascript" type="text/javascript">
   function successFunction(position) {
     var lat = "" + position.coords.latitude;
@@ -9,9 +12,8 @@
    long = long.replace('.','~');
    lat = lat.replace('-','^');
     long = long.replace('-','^');
-  
-    document.write('<a href="/toilets/nearby/'+lat+'/'+long+'">Nearby Toilets</a>');
-    //('aalert latitude is :'+lat+' and longitude is '+long);
+  $('#num1').attr('href', '/toilets/nearby/'+lat+'/'+long);
+  $('#num2').attr('href', '/toilets/nearby/'+lat+'/'+long);
 }
 function errorFunction(position) {
     alert('Error!');
@@ -24,3 +26,22 @@ if (navigator.geolocation) {
 }
     </script>
   
+<div id="find1" data-role="page">
+<div data-role="header" data-position="inline">
+    <h1>Which one?</h1>
+    
+    
+</div>
+<div id="pick1" data-role="content">
+<a id="num1">
+    <img src="images/LR_images-06.png"><br><br>
+    <img src="images/LR_images-08.png">
+                        </a>
+    <a id="num2">
+    <img src="images/LR_images-07.png"><br><br>
+    <img src="images/LR_images-09.png">
+    
+    </a>
+    </div>
+    
+</div>
