@@ -8,6 +8,10 @@ class SessionsController < ApplicationController
   def callback
     code = params[:code]
     @access_token = foursquare.access_token(code, callback_session_url)
+    if (current_user)
+      current_user.access_token = @access_token
+      current_user.save
+    end
     session[:access_token] = @access_token
     
     redirect_to examples_path

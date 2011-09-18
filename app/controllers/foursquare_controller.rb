@@ -5,8 +5,12 @@ class FoursquareController < ApplicationController
 		@checkin = ActiveSupport::JSON.decode(params[:checkin])
 		@shouttxt = @checkin['shout']
 		@venue = @checkin['venue']
+
 @photoless = Toilet.where('photo_url = \'meh\'')
+
 		@photoless.each do | pltoilet |
+			@puser = pltoilet.user
+			foursquare = Foursquare::Base.new(@puser.account_token)
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
 	#	pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
 	@meh = @checkin.json['photos']['items'].first
