@@ -14,7 +14,9 @@ class ToiletsController < ApplicationController
   end
 
   def index
-    format.html
+        respond_to do |format|
+      format.html # index.html.erb]
+    end
   end
 
   # GET /toilets/1
