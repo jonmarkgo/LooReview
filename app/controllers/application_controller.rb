@@ -17,6 +17,15 @@ class ApplicationController < ActionController::Base
       begin
         foursquare = Foursquare::Base.new(session[:access_token])
         @current_user ||= foursquare.users.find("self")
+        puts "wee"
+         puts @current_user.to_json
+      @puser = User.find_by_uid(@current_user.id)
+      #@puseraccess_token = @access_token
+     # puts @access_token
+      puts "eheh"
+      puts @puser.to_json
+      #@puser.save
+   
       rescue Foursquare::InvalidAuth
         nil
       end
