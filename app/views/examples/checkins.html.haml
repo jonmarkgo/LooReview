@@ -1,8 +1,7 @@
 = sitemap "#{current_user.name}'s Recent Checkins"
 
 = see_more("https://developer.foursquare.com/docs/explore.html#req=users/self/checkins")
-.meh
-  current_user.to_json
+
 - current_user.checkins.each do |checkin|
   .checkin
     .venue
