@@ -4,11 +4,11 @@
 <ul data-role="listview"> 
 <% @toilets.each do |toilet| %>
 
-            <li> 
+            <li> <img src="<%= toilet.photo_url %>" class="ui-li-icon">
                 <h3><%= toilet.venue_name %></h3> 
                 <p><strong>"<%= toilet.shout %>"</strong></p> 
                 <p><%= toilet.distance_to([@lat,@lng]) %> mile(s) away</p> 
-                <p class="ui-li-aside"><% (1..toilet.rating).each do |i| %>
+                <p><% (1..toilet.rating).each do |i| %>
                 <img src="images/poo.png"><% end %></p> 
 
             </li> 
