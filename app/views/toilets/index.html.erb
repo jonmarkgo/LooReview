@@ -5,6 +5,8 @@
     var long = "" + position.coords.longitude;
  //   console.log(lat);
    // console.log(long);
+   lat = lat.replace('.','~');
+   long = long.replace('.','~');
    lat = lat.replace('-','^');
     long = long.replace('-','^');
   
