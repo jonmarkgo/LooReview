@@ -9,6 +9,8 @@ class CreateToilets < ActiveRecord::Migration
       t.float :venue_lng
       t.string :venue_name
       t.string :venue_id
+      t.string :shout
+      t.integer :rating
 
       t.timestamps
     end
