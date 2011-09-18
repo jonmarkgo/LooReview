@@ -10,6 +10,7 @@ class FoursquareController < ApplicationController
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
 		pltoilet.photo_url = @checkin.json['photos']['items'][1]['url']
 		pltoilet.save
+		puts pltoilet
 		end
 		if (@shouttxt.index('toilet') != nil)
 			@toilet = Toilet.new
@@ -22,7 +23,6 @@ class FoursquareController < ApplicationController
 			@toilet.venue_name = @venue['name']
 			@toilet.venue_id = @venue['id']
 			@toilet.save
-			puts @toilet.to_json
 		end
 	end
 
