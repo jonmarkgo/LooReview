@@ -2,8 +2,9 @@ class ToiletsController < ApplicationController
   # GET /toilets
   # GET /toilets.xml
   def index
-    city = request.location.city
-country = request.location.country_code 
+    @city = request.location.city
+@country = request.location.country_code 
+
     @toilets = Toilet.near(city)
 
     respond_to do |format|
