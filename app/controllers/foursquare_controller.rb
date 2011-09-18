@@ -31,7 +31,7 @@ def lol
 	@checkin = foursquare.checkins.find(pltoilet[:checkin_id])
 	puts"1"
 	@meh = @checkin.json['photos']['items'].first
-	puts @meh['sizes'].to_json
+	puts @meh['sizes']['items'].at(1).to_json
 	#puts"2"
 	#puts @checkin.json['photos']['items'].first.sizes.to_json
 		#pltoilet.photo_url = @checkin.json['photos']['items'].at(1)['url']
