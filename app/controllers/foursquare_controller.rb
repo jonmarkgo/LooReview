@@ -45,15 +45,15 @@ end
 end
 @rating = @rating.to_i
 if (@rating > 0 and @rating <= 20)
-	@toilet.rating = 5
+	@toilet.rating = 1
 elsif (@rating > 20 and @rating <= 40)
-	@toilet.rating = 4
+	@toilet.rating = 2
 elsif (@rating > 40 and @rating <= 50)
 	@toilet.rating = 3
 elsif (@rating > 50 and @rating <= 60)
-	@toilet.rating = 2
+	@toilet.rating = 4
 else
-	@toilet.rating = 1
+	@toilet.rating = 5
 end
 			@toilet.save
 			
