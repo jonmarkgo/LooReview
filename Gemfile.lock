@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/jnunemaker/crack.git
+  revision: dee7d84f77b96e8ff09d49c2b712580c07272c42
+  specs:
+    crack (0.3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -81,6 +87,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  crack!
   geocoder
   haml
   json
