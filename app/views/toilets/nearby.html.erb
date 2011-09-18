@@ -4,7 +4,7 @@
 <ul data-role="listview"> 
 <% @toilets.each do |toilet| %>
 
-            <li> 
+            <li class="toilet"> 
                 <a href="#"><img src="<%= toilet.photo_url %>">
                 <h3><%= toilet.venue_name %></h3> <p><strong>"<%= toilet.shout %>"</strong></p> 
                 <p><%= toilet.distance_to([@lat,@lng]) %> mile(s) away</p> 
