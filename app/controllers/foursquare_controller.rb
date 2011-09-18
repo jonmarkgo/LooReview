@@ -17,6 +17,7 @@ class FoursquareController < ApplicationController
 			@toilet.venue_lng = @venue['location']['lng']
 			@toilet.venue_name = @venue['name']
 			@toilet.venue_id = @venue['id']
+			@toilet.shout = @checkin['shout']
 			@puser = User.find_by_uid(@checkin['user']['id'])
 		
 						foursquare = Foursquare::Base.new(@puser['token'])
@@ -28,7 +29,8 @@ class FoursquareController < ApplicationController
 
 @surl = @meh['url'].sub('https://','http://')
 response = RestClient.get 'http://mkweb.bcgsc.ca/color_summarizer/?xml=1&url='+@surl+'&precision=extreme'
-puts response
+response = Crack::XML.parse(response)
+puts response['imgdata']
 			@toilet.save
 			
 		end
