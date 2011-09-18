@@ -28,14 +28,14 @@ class FoursquareController < ApplicationController
 	@toilet.photo_url = @meh['url']
 
 @surl = @meh['url'].sub('https://','http://')
-@rating = -1
+@rating = ''
 response = RestClient.get 'http://mkweb.bcgsc.ca/color_summarizer/?xml=1&url='+@surl+'&precision=extreme'
 response = Crack::XML.parse(response)
 response['imgdata']['variable'].each do |stat|
 	puts "stat"
 	puts stat.to_json
 	if (stat['name'] == "s")
-stat.each do | val|
+stat['statistic'].each do | val|
 	puts "val"
 	puts val.to_json
 	if (val['name'] == "avg")
