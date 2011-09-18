@@ -1,4 +1,36 @@
-<h1>Listing toilets near <%= @city %>, <%= @country %></h1>
+<script src="https://www.google.com/jsapi?key=ABQIAAAAzBE6r7fYf2Cah4elfkX5txT8jFYpegfZQShsQTBCFUIT4PL7EBTrrPHXXs6lyX_0vzVYGjKg5IaDvQ" type="text/javascript"></script>
+  <script language="Javascript" type="text/javascript">
+    //<![CDATA[
+
+    google.load("map", "2");
+
+    function OnLoad() {
+    /**
+ * Set the currentState_ and currentCountry_ properties based on the client's
+ * current location (when available and in the US), or to the defaults.
+ */
+InTheNews.prototype.setDefaultLocation_ = function() {
+  this.currentState_ = this.options_.startingState;
+  if (google.loader.ClientLocation &&
+      google.loader.ClientLocation.address.country_code == "US" &&
+      google.loader.ClientLocation.address.region) {
+
+    // geo locate was successful and user is in the United States. range
+    // check the region so that we can safely use it when selecting a
+    // state level polygon overlay
+    var state = google.loader.ClientLocation.address.region.toUpperCase();
+    if (InTheNews.stateNames[state]) {
+      this.currentState_ = state;
+    }
+  }
+  this.currentCountry_ = "US";
+}
+    }
+    google.setOnLoadCallback(OnLoad);
+
+    //]]>
+    </script>
+    <h1>Listing toilets near <%= @city %>, <%= @country %></h1>
 
 <table>
   <tr>
