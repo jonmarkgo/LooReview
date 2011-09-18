@@ -43,8 +43,10 @@ stat['statistic'].each do | val|
 end
 	end
 end
-puts @rating
-		#	@toilet.save
+@rating = @rating.to_i
+@toilet.rating = @rating % 5
+#puts @rating
+			@toilet.save
 			
 		end
 			render :status => :ok
